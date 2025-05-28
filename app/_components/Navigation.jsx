@@ -1,0 +1,14 @@
+import Link from 'next/link'
+import React from 'react'
+
+export default function Navigation() {
+  return (
+    <div className='space-x-5'>
+
+      <Link href={'/about'} className='font-bold'>About</Link>
+      <Link href={'/contact'} className='font-bold'>Contact</Link>
+      <Link href={'/product'}>Product Page</Link>
+
+    </div>
+  )
+}
