@@ -8,6 +8,7 @@ export default function Navigation() {
       <Link href={'/about'} className='font-bold'>About</Link>
       <Link href={'/contact'} className='font-bold'>Contact</Link>
       <Link href={'/product'}>Product Page</Link>
+      <Link href={'/todo'}>Todo Page</Link>
 
     </div>
   )
