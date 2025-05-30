@@ -3,7 +3,6 @@ import TodoList from '../_components/TodoList'
 import Link from 'next/link'
 
 export default function Page() {
-
   return (
     <div>
 
