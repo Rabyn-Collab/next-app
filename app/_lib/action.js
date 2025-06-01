@@ -4,6 +4,21 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 
+
+export async function getPosts() {
+
+  try {
+    const response = await axios.get('https://6837bb2a2c55e01d184aa831.mockapi.io/posts');
+
+    return { success: true, posts: response.data };
+  } catch (err) {
+    return { error: true, message: err.message };
+  }
+
+}
+
+
+
 export async function addData(val) {
   try {
 
@@ -17,6 +32,23 @@ export async function addData(val) {
   revalidatePath('/todo');
   redirect('/todo');
 }
+
+
+export async function editData(val) {
+  try {
+
+    await axios.patch(`https://6837bb2a2c55e01d184aa831.mockapi.io/todos/${val.id}`, val.body);
+
+    revalidatePath('/todo');
+    return { error: false, message: 'Data added successfully' };
+  } catch (err) {
+    return { error: true, message: err.message };
+  }
+
+
+  // redirect('/todo');
+}
+
 
 
 

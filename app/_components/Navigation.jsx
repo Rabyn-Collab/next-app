@@ -5,7 +5,7 @@ export default function Navigation() {
   return (
     <div className='space-x-5'>
 
-      <Link href={'/about'} className='font-bold'>About</Link>
+      <Link href={'/posts'} className='font-bold'>Posts</Link>
       <Link href={'/contact'} className='font-bold'>Contact</Link>
       <Link href={'/product'}>Product Page</Link>
       <Link href={'/todo'}>Todo Page</Link>
